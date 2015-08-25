@@ -27,7 +27,7 @@ static int ddLogLevel = DDLogLevelDebug;
     self.sensorManager.delegate = self;
 }
 
-#pragma mark - JSTSensorManagerDelegate
+#pragma mark - STSensorManagerDelegate
 
 - (void)manager:(STSensorManager *)manager didChangeStateTo:(CBCentralManagerState)state {
     DDLogInfo(@"%s", __PRETTY_FUNCTION__);

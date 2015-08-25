@@ -18,6 +18,7 @@
 		364BE2B8A1CEC7E9F3BE8972 /* STView.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEBE3D95B1EF0CFB9C248 /* STView.m */; };
 		364BE334D2646641616DCE78 /* STSensorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEDD6409FD88C312F628A /* STSensorManager.m */; };
 		364BE742257D6E39AE1492F5 /* CBUUID+StringRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE4221B3D16FF524C20AD /* CBUUID+StringRepresentation.m */; };
+		364BE832668F80C0CBDB05F6 /* STAccelerometerSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE8A6B550BF97DD323DB0 /* STAccelerometerSensor.m */; };
 		364BEC1D77D4B2E1857B9450 /* STSensorConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE5289BF473B42FC05F87 /* STSensorConstants.m */; };
 		364BECC75771401701E5ABCA /* STViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE4D7BE348AA280B9EAE9 /* STViewController.m */; };
 		364BEEC953C040E7FC3BC824 /* STBaseSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEC1CBCEB5C05338ECC1C /* STBaseSensor.m */; };
@@ -55,7 +56,9 @@
 		364BE4D7BE348AA280B9EAE9 /* STViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STViewController.m; sourceTree = "<group>"; };
 		364BE50F7342DECB342AC91C /* CBUUID+StringRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBUUID+StringRepresentation.h"; sourceTree = "<group>"; };
 		364BE5289BF473B42FC05F87 /* STSensorConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSensorConstants.m; sourceTree = "<group>"; };
+		364BE8A6B550BF97DD323DB0 /* STAccelerometerSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STAccelerometerSensor.m; path = Sensors/STAccelerometerSensor.m; sourceTree = "<group>"; };
 		364BE8C3CA5FFA815AD3D5BD /* STViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STViewController.h; sourceTree = "<group>"; };
+		364BE9BF70C741EA0801B838 /* STAccelerometerSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STAccelerometerSensor.h; path = Sensors/STAccelerometerSensor.h; sourceTree = "<group>"; };
 		364BEAF66986561F7675E9AB /* STSensorTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSensorTag.m; sourceTree = "<group>"; };
 		364BEBE3D95B1EF0CFB9C248 /* STView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STView.m; sourceTree = "<group>"; };
 		364BEBFFBF0AD0A7426E3B0B /* STSensorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSensorManager.h; sourceTree = "<group>"; };
@@ -160,6 +163,8 @@
 			children = (
 				364BE25DA786867296D50CCB /* STBaseSensor.h */,
 				364BEC1CBCEB5C05338ECC1C /* STBaseSensor.m */,
+				364BE9BF70C741EA0801B838 /* STAccelerometerSensor.h */,
+				364BE8A6B550BF97DD323DB0 /* STAccelerometerSensor.m */,
 			);
 			name = Sensors;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 				364BEEC953C040E7FC3BC824 /* STBaseSensor.m in Sources */,
 				364BECC75771401701E5ABCA /* STViewController.m in Sources */,
 				364BE2B8A1CEC7E9F3BE8972 /* STView.m in Sources */,
+				364BE832668F80C0CBDB05F6 /* STAccelerometerSensor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
