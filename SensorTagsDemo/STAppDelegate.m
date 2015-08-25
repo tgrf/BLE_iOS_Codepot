@@ -2,11 +2,11 @@
 #import "STAppDelegate.h"
 #import "DDLog.h"
 #import "DDTTYLogger.h"
-#import "STViewController.h"
 #import "STSensorManager.h"
+#import "STViewController.h"
 
 @interface STAppDelegate ()
-@property (readonly, strong, nonatomic) STSensorManager *sensorTagManager;
+@property (readonly, strong, nonatomic) STSensorManager *sensorManager;
 @end
 
 @implementation STAppDelegate
@@ -17,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
+
+    _sensorManager = [[STSensorManager alloc] init];
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:[[STViewController alloc] init]];
@@ -55,7 +57,7 @@
 @implementation STSensorManager (SharedInstance)
 
 + (STSensorManager *)sharedInstance {
-    return [STAppDelegate sharedInstance].sensorTagManager;
+    return [STAppDelegate sharedInstance].sensorManager;
 }
 
 @end
