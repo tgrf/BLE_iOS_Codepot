@@ -13,7 +13,13 @@
 		151852DA1B8D08A900DEBF3B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 151852D91B8D08A900DEBF3B /* Images.xcassets */; };
 		151852DD1B8D08A900DEBF3B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151852DB1B8D08A900DEBF3B /* LaunchScreen.xib */; };
 		151852E91B8D08A900DEBF3B /* SensorTagsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 151852E81B8D08A900DEBF3B /* SensorTagsDemoTests.m */; };
+		151852F31B8D15A700DEBF3B /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151852F21B8D15A700DEBF3B /* CoreBluetooth.framework */; };
 		2211C4B35AC58EC78EFB7597 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 466D4000642043451757F702 /* libPods.a */; };
+		364BE14318CD87B0045E2A19 /* STSensorTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEAF66986561F7675E9AB /* STSensorTag.m */; };
+		364BE334D2646641616DCE78 /* STSensorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEDD6409FD88C312F628A /* STSensorManager.m */; };
+		364BE742257D6E39AE1492F5 /* CBUUID+StringRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE4221B3D16FF524C20AD /* CBUUID+StringRepresentation.m */; };
+		364BEC1D77D4B2E1857B9450 /* STSensorConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE5289BF473B42FC05F87 /* STSensorConstants.m */; };
+		364BEEC953C040E7FC3BC824 /* STBaseSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEC1CBCEB5C05338ECC1C /* STBaseSensor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +45,19 @@
 		151852E21B8D08A900DEBF3B /* SensorTagsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensorTagsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		151852E71B8D08A900DEBF3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		151852E81B8D08A900DEBF3B /* SensorTagsDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorTagsDemoTests.m; sourceTree = "<group>"; };
+		151852F21B8D15A700DEBF3B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		2B492867AC4741C9FA534C2E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		364BE1EF5DC675C0F5CCCFE1 /* STSensorTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSensorTag.h; sourceTree = "<group>"; };
+		364BE25DA786867296D50CCB /* STBaseSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBaseSensor.h; path = Sensors/STBaseSensor.h; sourceTree = "<group>"; };
+		364BE34468BA72DACE2AE093 /* STSensorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSensorConstants.h; sourceTree = "<group>"; };
+		364BE4221B3D16FF524C20AD /* CBUUID+StringRepresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBUUID+StringRepresentation.m"; sourceTree = "<group>"; };
+		364BE49409A24DB7034001E3 /* SensorTagsDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SensorTagsDemo-Prefix.pch"; sourceTree = "<group>"; };
+		364BE50F7342DECB342AC91C /* CBUUID+StringRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBUUID+StringRepresentation.h"; sourceTree = "<group>"; };
+		364BE5289BF473B42FC05F87 /* STSensorConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSensorConstants.m; sourceTree = "<group>"; };
+		364BEAF66986561F7675E9AB /* STSensorTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSensorTag.m; sourceTree = "<group>"; };
+		364BEBFFBF0AD0A7426E3B0B /* STSensorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSensorManager.h; sourceTree = "<group>"; };
+		364BEC1CBCEB5C05338ECC1C /* STBaseSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBaseSensor.m; path = Sensors/STBaseSensor.m; sourceTree = "<group>"; };
+		364BEDD6409FD88C312F628A /* STSensorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSensorManager.m; sourceTree = "<group>"; };
 		3C36CA4B19B636C7E614B051 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		466D4000642043451757F702 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -49,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				151852F31B8D15A700DEBF3B /* CoreBluetooth.framework in Frameworks */,
 				2211C4B35AC58EC78EFB7597 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +112,7 @@
 				151852D91B8D08A900DEBF3B /* Images.xcassets */,
 				151852DB1B8D08A900DEBF3B /* LaunchScreen.xib */,
 				151852CC1B8D08A800DEBF3B /* Supporting Files */,
+				364BE5B0AA85E23D8F5EDD75 /* Device */,
 			);
 			path = SensorTagsDemo;
 			sourceTree = "<group>";
@@ -102,6 +122,7 @@
 			children = (
 				151852CD1B8D08A800DEBF3B /* Info.plist */,
 				151852CE1B8D08A800DEBF3B /* main.m */,
+				364BE49409A24DB7034001E3 /* SensorTagsDemo-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -126,9 +147,35 @@
 		3516D04B9DF0E77598A171E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				151852F21B8D15A700DEBF3B /* CoreBluetooth.framework */,
 				466D4000642043451757F702 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		364BE2419F8512768D5B0472 /* Sensors */ = {
+			isa = PBXGroup;
+			children = (
+				364BE25DA786867296D50CCB /* STBaseSensor.h */,
+				364BEC1CBCEB5C05338ECC1C /* STBaseSensor.m */,
+			);
+			name = Sensors;
+			sourceTree = "<group>";
+		};
+		364BE5B0AA85E23D8F5EDD75 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				364BEBFFBF0AD0A7426E3B0B /* STSensorManager.h */,
+				364BEDD6409FD88C312F628A /* STSensorManager.m */,
+				364BE50F7342DECB342AC91C /* CBUUID+StringRepresentation.h */,
+				364BE4221B3D16FF524C20AD /* CBUUID+StringRepresentation.m */,
+				364BE34468BA72DACE2AE093 /* STSensorConstants.h */,
+				364BE5289BF473B42FC05F87 /* STSensorConstants.m */,
+				364BE1EF5DC675C0F5CCCFE1 /* STSensorTag.h */,
+				364BEAF66986561F7675E9AB /* STSensorTag.m */,
+				364BE2419F8512768D5B0472 /* Sensors */,
+			);
+			path = Device;
 			sourceTree = "<group>";
 		};
 		405A41CFDC2BC0BAB8DB7FFA /* Pods */ = {
@@ -277,6 +324,11 @@
 				151852D51B8D08A800DEBF3B /* STViewController.m in Sources */,
 				151852D21B8D08A800DEBF3B /* STAppDelegate.m in Sources */,
 				151852CF1B8D08A800DEBF3B /* main.m in Sources */,
+				364BE334D2646641616DCE78 /* STSensorManager.m in Sources */,
+				364BE742257D6E39AE1492F5 /* CBUUID+StringRepresentation.m in Sources */,
+				364BEC1D77D4B2E1857B9450 /* STSensorConstants.m in Sources */,
+				364BE14318CD87B0045E2A19 /* STSensorTag.m in Sources */,
+				364BEEC953C040E7FC3BC824 /* STBaseSensor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +449,7 @@
 			baseConfigurationReference = 2B492867AC4741C9FA534C2E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "SensorTagsDemo/SensorTagsDemo-Prefix.pch";
 				INFOPLIST_FILE = SensorTagsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -408,6 +461,7 @@
 			baseConfigurationReference = 3C36CA4B19B636C7E614B051 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "SensorTagsDemo/SensorTagsDemo-Prefix.pch";
 				INFOPLIST_FILE = SensorTagsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

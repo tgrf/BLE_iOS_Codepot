@@ -1,0 +1,4 @@
+// Services
+NSString *const STSensorTestServiceUUID = @"F000AA60-0451-4000-B000-000000000000";
+NSString *const STSensorOADServiceUUID = @"F000FFC0-0451-4000-B000-000000000000";
+

@@ -3,6 +3,5 @@
 
 @interface STViewController : UIViewController
 
-
 @end
 
