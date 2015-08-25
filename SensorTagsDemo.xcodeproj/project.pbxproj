@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		151852CF1B8D08A800DEBF3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 151852CE1B8D08A800DEBF3B /* main.m */; };
-		151852D21B8D08A800DEBF3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 151852D11B8D08A800DEBF3B /* AppDelegate.m */; };
-		151852D51B8D08A800DEBF3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 151852D41B8D08A800DEBF3B /* ViewController.m */; };
-		151852D81B8D08A800DEBF3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 151852D61B8D08A800DEBF3B /* Main.storyboard */; };
+		151852D21B8D08A800DEBF3B /* STAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 151852D11B8D08A800DEBF3B /* STAppDelegate.m */; };
+		151852D51B8D08A800DEBF3B /* STViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 151852D41B8D08A800DEBF3B /* STViewController.m */; };
 		151852DA1B8D08A900DEBF3B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 151852D91B8D08A900DEBF3B /* Images.xcassets */; };
 		151852DD1B8D08A900DEBF3B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151852DB1B8D08A900DEBF3B /* LaunchScreen.xib */; };
 		151852E91B8D08A900DEBF3B /* SensorTagsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 151852E81B8D08A900DEBF3B /* SensorTagsDemoTests.m */; };
@@ -30,11 +29,10 @@
 		151852C91B8D08A800DEBF3B /* SensorTagsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensorTagsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		151852CD1B8D08A800DEBF3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		151852CE1B8D08A800DEBF3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		151852D01B8D08A800DEBF3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		151852D11B8D08A800DEBF3B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		151852D31B8D08A800DEBF3B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		151852D41B8D08A800DEBF3B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		151852D71B8D08A800DEBF3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		151852D01B8D08A800DEBF3B /* STAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAppDelegate.h; sourceTree = "<group>"; };
+		151852D11B8D08A800DEBF3B /* STAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STAppDelegate.m; sourceTree = "<group>"; };
+		151852D31B8D08A800DEBF3B /* STViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STViewController.h; sourceTree = "<group>"; };
+		151852D41B8D08A800DEBF3B /* STViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STViewController.m; sourceTree = "<group>"; };
 		151852D91B8D08A900DEBF3B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		151852DC1B8D08A900DEBF3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		151852E21B8D08A900DEBF3B /* SensorTagsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensorTagsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,11 +79,10 @@
 		151852CB1B8D08A800DEBF3B /* SensorTagsDemo */ = {
 			isa = PBXGroup;
 			children = (
-				151852D01B8D08A800DEBF3B /* AppDelegate.h */,
-				151852D11B8D08A800DEBF3B /* AppDelegate.m */,
-				151852D31B8D08A800DEBF3B /* ViewController.h */,
-				151852D41B8D08A800DEBF3B /* ViewController.m */,
-				151852D61B8D08A800DEBF3B /* Main.storyboard */,
+				151852D01B8D08A800DEBF3B /* STAppDelegate.h */,
+				151852D11B8D08A800DEBF3B /* STAppDelegate.m */,
+				151852D31B8D08A800DEBF3B /* STViewController.h */,
+				151852D41B8D08A800DEBF3B /* STViewController.m */,
 				151852D91B8D08A900DEBF3B /* Images.xcassets */,
 				151852DB1B8D08A900DEBF3B /* LaunchScreen.xib */,
 				151852CC1B8D08A800DEBF3B /* Supporting Files */,
@@ -199,7 +196,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				151852D81B8D08A800DEBF3B /* Main.storyboard in Resources */,
 				151852DD1B8D08A900DEBF3B /* LaunchScreen.xib in Resources */,
 				151852DA1B8D08A900DEBF3B /* Images.xcassets in Resources */,
 			);
@@ -219,8 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				151852D51B8D08A800DEBF3B /* ViewController.m in Sources */,
-				151852D21B8D08A800DEBF3B /* AppDelegate.m in Sources */,
+				151852D51B8D08A800DEBF3B /* STViewController.m in Sources */,
+				151852D21B8D08A800DEBF3B /* STAppDelegate.m in Sources */,
 				151852CF1B8D08A800DEBF3B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,14 +240,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		151852D61B8D08A800DEBF3B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				151852D71B8D08A800DEBF3B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		151852DB1B8D08A900DEBF3B /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -418,6 +406,7 @@
 				151852EE1B8D08A900DEBF3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		151852EF1B8D08A900DEBF3B /* Build configuration list for PBXNativeTarget "SensorTagsDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +415,7 @@
 				151852F11B8D08A900DEBF3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

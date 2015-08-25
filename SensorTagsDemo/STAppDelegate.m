@@ -1,18 +1,11 @@
-//
-//  AppDelegate.m
-//  SensorTagsDemo
-//
-//  Created by Tomasz Grynfelder on 25/08/15.
-//  Copyright (c) 2015 codepot.pl. All rights reserved.
-//
 
-#import "AppDelegate.h"
+#import "STAppDelegate.h"
 
-@interface AppDelegate ()
+@interface STAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation STAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
