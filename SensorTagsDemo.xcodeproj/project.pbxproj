@@ -17,6 +17,7 @@
 		364BE14318CD87B0045E2A19 /* STSensorTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEAF66986561F7675E9AB /* STSensorTag.m */; };
 		364BE2B8A1CEC7E9F3BE8972 /* STView.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEBE3D95B1EF0CFB9C248 /* STView.m */; };
 		364BE334D2646641616DCE78 /* STSensorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEDD6409FD88C312F628A /* STSensorManager.m */; };
+		364BE5751581DF787EF083B0 /* STMagnetometerSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE4018E70D92539CDE70A /* STMagnetometerSensor.m */; };
 		364BE742257D6E39AE1492F5 /* CBUUID+StringRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE4221B3D16FF524C20AD /* CBUUID+StringRepresentation.m */; };
 		364BE832668F80C0CBDB05F6 /* STAccelerometerSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE8A6B550BF97DD323DB0 /* STAccelerometerSensor.m */; };
 		364BEC1D77D4B2E1857B9450 /* STSensorConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE5289BF473B42FC05F87 /* STSensorConstants.m */; };
@@ -56,6 +57,7 @@
 		364BE25DA786867296D50CCB /* STBaseSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBaseSensor.h; path = Sensors/STBaseSensor.h; sourceTree = "<group>"; };
 		364BE34468BA72DACE2AE093 /* STSensorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSensorConstants.h; sourceTree = "<group>"; };
 		364BE3FDB26F5DAD311E421D /* STIRSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STIRSensor.h; path = Sensors/STIRSensor.h; sourceTree = "<group>"; };
+		364BE4018E70D92539CDE70A /* STMagnetometerSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STMagnetometerSensor.m; path = Sensors/STMagnetometerSensor.m; sourceTree = "<group>"; };
 		364BE4221B3D16FF524C20AD /* CBUUID+StringRepresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBUUID+StringRepresentation.m"; sourceTree = "<group>"; };
 		364BE45781C071299A9D0F0F /* STHumiditySensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STHumiditySensor.m; path = Sensors/STHumiditySensor.m; sourceTree = "<group>"; };
 		364BE49409A24DB7034001E3 /* SensorTagsDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SensorTagsDemo-Prefix.pch"; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		364BEC1CBCEB5C05338ECC1C /* STBaseSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBaseSensor.m; path = Sensors/STBaseSensor.m; sourceTree = "<group>"; };
 		364BEDD6409FD88C312F628A /* STSensorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSensorManager.m; sourceTree = "<group>"; };
 		364BEF23DD973BB8BF1C3914 /* STIRSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STIRSensor.m; path = Sensors/STIRSensor.m; sourceTree = "<group>"; };
+		364BEF710245CCC97459C1F0 /* STMagnetometerSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STMagnetometerSensor.h; path = Sensors/STMagnetometerSensor.h; sourceTree = "<group>"; };
 		364BEFBD03D75ABFC7AC81D6 /* STGyroscopeSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STGyroscopeSensor.m; path = Sensors/STGyroscopeSensor.m; sourceTree = "<group>"; };
 		364BEFF07956549A6E808497 /* STGyroscopeSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STGyroscopeSensor.h; path = Sensors/STGyroscopeSensor.h; sourceTree = "<group>"; };
 		3C36CA4B19B636C7E614B051 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 				364BEF23DD973BB8BF1C3914 /* STIRSensor.m */,
 				364BE9044F436487FABDB89D /* STKeysSensor.h */,
 				364BE750FCC0916B66A79B0A /* STKeysSensor.m */,
+				364BEF710245CCC97459C1F0 /* STMagnetometerSensor.h */,
+				364BE4018E70D92539CDE70A /* STMagnetometerSensor.m */,
 			);
 			name = Sensors;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 				364BECC2BFE96D211A3E8A30 /* STHumiditySensor.m in Sources */,
 				364BECCBD11C53B5E7AC1C89 /* STIRSensor.m in Sources */,
 				364BEF3486F5925C55CD2CE7 /* STKeysSensor.m in Sources */,
+				364BE5751581DF787EF083B0 /* STMagnetometerSensor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

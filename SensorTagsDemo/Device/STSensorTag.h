@@ -7,6 +7,7 @@
 @class STHumiditySensor;
 @class STIRSensor;
 @class STKeysSensor;
+@class STMagnetometerSensor;
 
 typedef struct {
     float x, y, z;
@@ -24,6 +25,7 @@ extern NSString *const STSensorTagDidFinishDiscoveryNotification;
 @property(nonatomic, readonly) STHumiditySensor *humiditySensor;
 @property(nonatomic, readonly) STIRSensor *irSensor;
 @property(nonatomic, readonly) STKeysSensor *keysSensor;
+@property(nonatomic, readonly) STMagnetometerSensor *magnetometerSensor;
 
 + (NSArray *)availableServicesUUIDArray;
 - (instancetype)initWithPeripheral:(CBPeripheral *)peripheral;
