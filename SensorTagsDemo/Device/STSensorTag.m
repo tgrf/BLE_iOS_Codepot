@@ -7,6 +7,7 @@
 #import "STGyroscopeSensor.h"
 #import "STHumiditySensor.h"
 #import "STIRSensor.h"
+#import "STKeysSensor.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 static int ddLogLevel = DDLogLevelWarning;
 
@@ -23,6 +24,7 @@ NSString *const STSensorTagConnectionFailureNotificationErrorKey = @"STSensorTag
 @property(nonatomic, readwrite) STAccelerometerSensor *accelerometerSensor;
 @property(nonatomic, readwrite) STGyroscopeSensor *gyroscopeSensor;
 @property(nonatomic, readwrite) STHumiditySensor *humiditySensor;
+@property(nonatomic, readwrite) STKeysSensor *keysSensor;
 @end
 
 @implementation STSensorTag {
@@ -42,6 +44,7 @@ NSString *const STSensorTagConnectionFailureNotificationErrorKey = @"STSensorTag
         self.gyroscopeSensor = [[STGyroscopeSensor alloc] initWithPeripheral:peripheral];
         self.humiditySensor = [[STHumiditySensor alloc] initWithPeripheral:peripheral];
         self.irSensor = [[STIRSensor alloc] initWithPeripheral:peripheral];
+        self.keysSensor = [[STKeysSensor alloc] initWithPeripheral:peripheral];
     }
     return self;
 }
@@ -141,6 +144,7 @@ NSString *const STSensorTagConnectionFailureNotificationErrorKey = @"STSensorTag
             [CBUUID UUIDWithString:[STGyroscopeSensor serviceUUID]],
             [CBUUID UUIDWithString:[STHumiditySensor serviceUUID]],
             [CBUUID UUIDWithString:[STIRSensor serviceUUID]],
+            [CBUUID UUIDWithString:[STKeysSensor serviceUUID]],
             [CBUUID UUIDWithString:@"180A"]
     ];
 }
@@ -156,6 +160,8 @@ NSString *const STSensorTagConnectionFailureNotificationErrorKey = @"STSensorTag
         return self.humiditySensor;
     } else if ([uuid isEqualToString:[[STIRSensor serviceUUID] lowercaseString] ]) {
         return self.irSensor;
+    } else if ([uuid isEqualToString:[[STKeysSensor serviceUUID] lowercaseString] ]) {
+        return self.keysSensor;
     }
 
     return nil;
