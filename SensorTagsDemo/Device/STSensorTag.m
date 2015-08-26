@@ -4,6 +4,7 @@
 #import "CBUUID+StringRepresentation.h"
 #import "STBaseSensor.h"
 #import "STAccelerometerSensor.h"
+#import "STGyroscopeSensor.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 static int ddLogLevel = DDLogLevelWarning;
 
@@ -17,6 +18,7 @@ NSString *const STSensorTagConnectionFailureNotificationErrorKey = @"STSensorTag
 @property(nonatomic) UInt16 *calibrationDataUnsigned;
 @property(nonatomic) int16_t *calibrationDataSigned;
 @property(nonatomic, readwrite) STAccelerometerSensor *accelerometerSensor;
+@property(nonatomic, readwrite) STGyroscopeSensor *gyroscopeSensor;
 @end
 
 @implementation STSensorTag {
@@ -33,6 +35,7 @@ NSString *const STSensorTagConnectionFailureNotificationErrorKey = @"STSensorTag
         self.numberOfDiscoveredServices = 0;
 
         self.accelerometerSensor = [[STAccelerometerSensor alloc] initWithPeripheral:peripheral];
+        self.gyroscopeSensor = [[STGyroscopeSensor alloc] initWithPeripheral:peripheral];
     }
     return self;
 }
@@ -129,6 +132,7 @@ NSString *const STSensorTagConnectionFailureNotificationErrorKey = @"STSensorTag
 + (NSArray *)availableServicesUUIDArray {
     return @[
             [CBUUID UUIDWithString:[STAccelerometerSensor serviceUUID]],
+            [CBUUID UUIDWithString:[STGyroscopeSensor serviceUUID]],
             [CBUUID UUIDWithString:@"180A"]
     ];
 }
@@ -138,6 +142,8 @@ NSString *const STSensorTagConnectionFailureNotificationErrorKey = @"STSensorTag
     NSString *uuid = [[characteristic.service.UUID stringRepresentation] lowercaseString];
     if ([uuid isEqualToString:[[STAccelerometerSensor serviceUUID] lowercaseString]]) {
         return self.accelerometerSensor;
+    } else if ([uuid isEqualToString:[[STGyroscopeSensor serviceUUID] lowercaseString] ]) {
+        return self.gyroscopeSensor;
     }
 
     return nil;

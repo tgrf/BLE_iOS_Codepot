@@ -20,6 +20,7 @@
 		364BE742257D6E39AE1492F5 /* CBUUID+StringRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE4221B3D16FF524C20AD /* CBUUID+StringRepresentation.m */; };
 		364BE832668F80C0CBDB05F6 /* STAccelerometerSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE8A6B550BF97DD323DB0 /* STAccelerometerSensor.m */; };
 		364BEC1D77D4B2E1857B9450 /* STSensorConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE5289BF473B42FC05F87 /* STSensorConstants.m */; };
+		364BEC3ECA96EBACD593DF47 /* STGyroscopeSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEFBD03D75ABFC7AC81D6 /* STGyroscopeSensor.m */; };
 		364BECC75771401701E5ABCA /* STViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE4D7BE348AA280B9EAE9 /* STViewController.m */; };
 		364BEEC953C040E7FC3BC824 /* STBaseSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEC1CBCEB5C05338ECC1C /* STBaseSensor.m */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,8 @@
 		364BEBFFBF0AD0A7426E3B0B /* STSensorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSensorManager.h; sourceTree = "<group>"; };
 		364BEC1CBCEB5C05338ECC1C /* STBaseSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBaseSensor.m; path = Sensors/STBaseSensor.m; sourceTree = "<group>"; };
 		364BEDD6409FD88C312F628A /* STSensorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSensorManager.m; sourceTree = "<group>"; };
+		364BEFBD03D75ABFC7AC81D6 /* STGyroscopeSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STGyroscopeSensor.m; path = Sensors/STGyroscopeSensor.m; sourceTree = "<group>"; };
+		364BEFF07956549A6E808497 /* STGyroscopeSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STGyroscopeSensor.h; path = Sensors/STGyroscopeSensor.h; sourceTree = "<group>"; };
 		3C36CA4B19B636C7E614B051 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		466D4000642043451757F702 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -165,6 +168,8 @@
 				364BEC1CBCEB5C05338ECC1C /* STBaseSensor.m */,
 				364BE9BF70C741EA0801B838 /* STAccelerometerSensor.h */,
 				364BE8A6B550BF97DD323DB0 /* STAccelerometerSensor.m */,
+				364BEFF07956549A6E808497 /* STGyroscopeSensor.h */,
+				364BEFBD03D75ABFC7AC81D6 /* STGyroscopeSensor.m */,
 			);
 			name = Sensors;
 			sourceTree = "<group>";
@@ -349,6 +354,7 @@
 				364BECC75771401701E5ABCA /* STViewController.m in Sources */,
 				364BE2B8A1CEC7E9F3BE8972 /* STView.m in Sources */,
 				364BE832668F80C0CBDB05F6 /* STAccelerometerSensor.m in Sources */,
+				364BEC3ECA96EBACD593DF47 /* STGyroscopeSensor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
