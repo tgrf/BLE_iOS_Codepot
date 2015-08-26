@@ -6,6 +6,7 @@
 #import "STAccelerometerSensor.h"
 #import "STGyroscopeSensor.h"
 #import "STHumiditySensor.h"
+#import "STIRSensor.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 static int ddLogLevel = DDLogLevelWarning;
 
@@ -18,6 +19,7 @@ NSString *const STSensorTagConnectionFailureNotificationErrorKey = @"STSensorTag
 @property(nonatomic) int numberOfDiscoveredServices;
 @property(nonatomic) UInt16 *calibrationDataUnsigned;
 @property(nonatomic) int16_t *calibrationDataSigned;
+@property(nonatomic, readwrite) STIRSensor *irSensor;
 @property(nonatomic, readwrite) STAccelerometerSensor *accelerometerSensor;
 @property(nonatomic, readwrite) STGyroscopeSensor *gyroscopeSensor;
 @property(nonatomic, readwrite) STHumiditySensor *humiditySensor;
@@ -39,6 +41,7 @@ NSString *const STSensorTagConnectionFailureNotificationErrorKey = @"STSensorTag
         self.accelerometerSensor = [[STAccelerometerSensor alloc] initWithPeripheral:peripheral];
         self.gyroscopeSensor = [[STGyroscopeSensor alloc] initWithPeripheral:peripheral];
         self.humiditySensor = [[STHumiditySensor alloc] initWithPeripheral:peripheral];
+        self.irSensor = [[STIRSensor alloc] initWithPeripheral:peripheral];
     }
     return self;
 }
@@ -137,6 +140,7 @@ NSString *const STSensorTagConnectionFailureNotificationErrorKey = @"STSensorTag
             [CBUUID UUIDWithString:[STAccelerometerSensor serviceUUID]],
             [CBUUID UUIDWithString:[STGyroscopeSensor serviceUUID]],
             [CBUUID UUIDWithString:[STHumiditySensor serviceUUID]],
+            [CBUUID UUIDWithString:[STIRSensor serviceUUID]],
             [CBUUID UUIDWithString:@"180A"]
     ];
 }
@@ -150,6 +154,8 @@ NSString *const STSensorTagConnectionFailureNotificationErrorKey = @"STSensorTag
         return self.gyroscopeSensor;
     } else if ([uuid isEqualToString:[[STHumiditySensor serviceUUID] lowercaseString] ]) {
         return self.humiditySensor;
+    } else if ([uuid isEqualToString:[[STIRSensor serviceUUID] lowercaseString] ]) {
+        return self.irSensor;
     }
 
     return nil;

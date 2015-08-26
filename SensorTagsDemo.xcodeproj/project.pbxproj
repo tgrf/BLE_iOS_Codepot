@@ -23,6 +23,7 @@
 		364BEC3ECA96EBACD593DF47 /* STGyroscopeSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEFBD03D75ABFC7AC81D6 /* STGyroscopeSensor.m */; };
 		364BECC2BFE96D211A3E8A30 /* STHumiditySensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE45781C071299A9D0F0F /* STHumiditySensor.m */; };
 		364BECC75771401701E5ABCA /* STViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE4D7BE348AA280B9EAE9 /* STViewController.m */; };
+		364BECCBD11C53B5E7AC1C89 /* STIRSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEF23DD973BB8BF1C3914 /* STIRSensor.m */; };
 		364BEEC953C040E7FC3BC824 /* STBaseSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEC1CBCEB5C05338ECC1C /* STBaseSensor.m */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		364BE22E6590220E073A759E /* STHumiditySensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STHumiditySensor.h; path = Sensors/STHumiditySensor.h; sourceTree = "<group>"; };
 		364BE25DA786867296D50CCB /* STBaseSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBaseSensor.h; path = Sensors/STBaseSensor.h; sourceTree = "<group>"; };
 		364BE34468BA72DACE2AE093 /* STSensorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSensorConstants.h; sourceTree = "<group>"; };
+		364BE3FDB26F5DAD311E421D /* STIRSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STIRSensor.h; path = Sensors/STIRSensor.h; sourceTree = "<group>"; };
 		364BE4221B3D16FF524C20AD /* CBUUID+StringRepresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBUUID+StringRepresentation.m"; sourceTree = "<group>"; };
 		364BE45781C071299A9D0F0F /* STHumiditySensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STHumiditySensor.m; path = Sensors/STHumiditySensor.m; sourceTree = "<group>"; };
 		364BE49409A24DB7034001E3 /* SensorTagsDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SensorTagsDemo-Prefix.pch"; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		364BEBFFBF0AD0A7426E3B0B /* STSensorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSensorManager.h; sourceTree = "<group>"; };
 		364BEC1CBCEB5C05338ECC1C /* STBaseSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBaseSensor.m; path = Sensors/STBaseSensor.m; sourceTree = "<group>"; };
 		364BEDD6409FD88C312F628A /* STSensorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSensorManager.m; sourceTree = "<group>"; };
+		364BEF23DD973BB8BF1C3914 /* STIRSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STIRSensor.m; path = Sensors/STIRSensor.m; sourceTree = "<group>"; };
 		364BEFBD03D75ABFC7AC81D6 /* STGyroscopeSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STGyroscopeSensor.m; path = Sensors/STGyroscopeSensor.m; sourceTree = "<group>"; };
 		364BEFF07956549A6E808497 /* STGyroscopeSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STGyroscopeSensor.h; path = Sensors/STGyroscopeSensor.h; sourceTree = "<group>"; };
 		3C36CA4B19B636C7E614B051 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 				364BEFBD03D75ABFC7AC81D6 /* STGyroscopeSensor.m */,
 				364BE22E6590220E073A759E /* STHumiditySensor.h */,
 				364BE45781C071299A9D0F0F /* STHumiditySensor.m */,
+				364BE3FDB26F5DAD311E421D /* STIRSensor.h */,
+				364BEF23DD973BB8BF1C3914 /* STIRSensor.m */,
 			);
 			name = Sensors;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 				364BE832668F80C0CBDB05F6 /* STAccelerometerSensor.m in Sources */,
 				364BEC3ECA96EBACD593DF47 /* STGyroscopeSensor.m in Sources */,
 				364BECC2BFE96D211A3E8A30 /* STHumiditySensor.m in Sources */,
+				364BECCBD11C53B5E7AC1C89 /* STIRSensor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
