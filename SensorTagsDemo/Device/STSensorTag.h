@@ -2,6 +2,7 @@
 #import "STSensorConstants.h"
 
 @class STSensorTag;
+@class STAccelerometerSensor;
 
 typedef struct {
     float x, y, z;
@@ -17,10 +18,9 @@ extern NSString *const STSensorTagDidFinishDiscoveryNotification;
 
 @property(nonatomic, copy) NSString *macAddress;
 
+@property(nonatomic, strong, readonly) STAccelerometerSensor *accelerometerSensor;
+
 + (NSArray *)availableServicesUUIDArray;
-
 - (instancetype)initWithPeripheral:(CBPeripheral *)peripheral;
-
 - (void)discoverServices;
-
 @end

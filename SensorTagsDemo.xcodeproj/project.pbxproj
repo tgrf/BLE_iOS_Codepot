@@ -13,6 +13,7 @@
 		151852DD1B8D08A900DEBF3B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151852DB1B8D08A900DEBF3B /* LaunchScreen.xib */; };
 		151852E91B8D08A900DEBF3B /* SensorTagsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 151852E81B8D08A900DEBF3B /* SensorTagsDemoTests.m */; };
 		151852F31B8D15A700DEBF3B /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151852F21B8D15A700DEBF3B /* CoreBluetooth.framework */; };
+		15BC39EA1B90A964002E9810 /* STAccelerometerSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC39E91B90A964002E9810 /* STAccelerometerSensor.m */; };
 		2211C4B35AC58EC78EFB7597 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 466D4000642043451757F702 /* libPods.a */; };
 		364BE14318CD87B0045E2A19 /* STSensorTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEAF66986561F7675E9AB /* STSensorTag.m */; };
 		364BE2B8A1CEC7E9F3BE8972 /* STView.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEBE3D95B1EF0CFB9C248 /* STView.m */; };
@@ -45,6 +46,8 @@
 		151852E71B8D08A900DEBF3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		151852E81B8D08A900DEBF3B /* SensorTagsDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorTagsDemoTests.m; sourceTree = "<group>"; };
 		151852F21B8D15A700DEBF3B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		15BC39E81B90A964002E9810 /* STAccelerometerSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STAccelerometerSensor.h; path = Sensors/STAccelerometerSensor.h; sourceTree = "<group>"; };
+		15BC39E91B90A964002E9810 /* STAccelerometerSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STAccelerometerSensor.m; path = Sensors/STAccelerometerSensor.m; sourceTree = "<group>"; };
 		2B492867AC4741C9FA534C2E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		364BE1EF5DC675C0F5CCCFE1 /* STSensorTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSensorTag.h; sourceTree = "<group>"; };
 		364BE25DA786867296D50CCB /* STBaseSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBaseSensor.h; path = Sensors/STBaseSensor.h; sourceTree = "<group>"; };
@@ -160,6 +163,8 @@
 			children = (
 				364BE25DA786867296D50CCB /* STBaseSensor.h */,
 				364BEC1CBCEB5C05338ECC1C /* STBaseSensor.m */,
+				15BC39E81B90A964002E9810 /* STAccelerometerSensor.h */,
+				15BC39E91B90A964002E9810 /* STAccelerometerSensor.m */,
 			);
 			name = Sensors;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 				364BE742257D6E39AE1492F5 /* CBUUID+StringRepresentation.m in Sources */,
 				364BEC1D77D4B2E1857B9450 /* STSensorConstants.m in Sources */,
 				364BE14318CD87B0045E2A19 /* STSensorTag.m in Sources */,
+				15BC39EA1B90A964002E9810 /* STAccelerometerSensor.m in Sources */,
 				364BEEC953C040E7FC3BC824 /* STBaseSensor.m in Sources */,
 				364BECC75771401701E5ABCA /* STViewController.m in Sources */,
 				364BE2B8A1CEC7E9F3BE8972 /* STView.m in Sources */,
