@@ -14,12 +14,18 @@
 		151852E91B8D08A900DEBF3B /* SensorTagsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 151852E81B8D08A900DEBF3B /* SensorTagsDemoTests.m */; };
 		151852F31B8D15A700DEBF3B /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151852F21B8D15A700DEBF3B /* CoreBluetooth.framework */; };
 		2211C4B35AC58EC78EFB7597 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 466D4000642043451757F702 /* libPods.a */; };
+		364BE124EA5DF01B0A2E976B /* STDeviceListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE0707B1FE60CE59099A2 /* STDeviceListView.m */; };
 		364BE14318CD87B0045E2A19 /* STSensorTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEAF66986561F7675E9AB /* STSensorTag.m */; };
 		364BE2B8A1CEC7E9F3BE8972 /* STView.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEBE3D95B1EF0CFB9C248 /* STView.m */; };
 		364BE334D2646641616DCE78 /* STSensorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEDD6409FD88C312F628A /* STSensorManager.m */; };
+		364BE3CAE4050AFDE34D0D79 /* STDeviceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE10077CCEAA2367B6D9B /* STDeviceListViewController.m */; };
 		364BE5751581DF787EF083B0 /* STMagnetometerSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE4018E70D92539CDE70A /* STMagnetometerSensor.m */; };
+		364BE6A2906529923691A1EB /* STDeviceListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE62068EDF92F252469E8 /* STDeviceListCell.m */; };
 		364BE742257D6E39AE1492F5 /* CBUUID+StringRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE4221B3D16FF524C20AD /* CBUUID+StringRepresentation.m */; };
 		364BE832668F80C0CBDB05F6 /* STAccelerometerSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE8A6B550BF97DD323DB0 /* STAccelerometerSensor.m */; };
+		364BE9C4D3F65FD43250021F /* STConnectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE13CCDBC229534EEC5DB /* STConnectionView.m */; };
+		364BE9C6FD24A71845E19F62 /* STBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEC2BAB38BB16AF305A27 /* STBaseViewController.m */; };
+		364BEA828D962744E1DA3F8B /* STConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEB048660D1C455FF893A /* STConnectionViewController.m */; };
 		364BEC1D77D4B2E1857B9450 /* STSensorConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE5289BF473B42FC05F87 /* STSensorConstants.m */; };
 		364BEC3ECA96EBACD593DF47 /* STGyroscopeSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BEFBD03D75ABFC7AC81D6 /* STGyroscopeSensor.m */; };
 		364BECC2BFE96D211A3E8A30 /* STHumiditySensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BE45781C071299A9D0F0F /* STHumiditySensor.m */; };
@@ -53,6 +59,10 @@
 		151852E81B8D08A900DEBF3B /* SensorTagsDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorTagsDemoTests.m; sourceTree = "<group>"; };
 		151852F21B8D15A700DEBF3B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		2B492867AC4741C9FA534C2E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		364BE044AD4163669D1D0082 /* STConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConnectionViewController.h; sourceTree = "<group>"; };
+		364BE0707B1FE60CE59099A2 /* STDeviceListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDeviceListView.m; sourceTree = "<group>"; };
+		364BE10077CCEAA2367B6D9B /* STDeviceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDeviceListViewController.m; sourceTree = "<group>"; };
+		364BE13CCDBC229534EEC5DB /* STConnectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STConnectionView.m; sourceTree = "<group>"; };
 		364BE1EF5DC675C0F5CCCFE1 /* STSensorTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSensorTag.h; sourceTree = "<group>"; };
 		364BE22E6590220E073A759E /* STHumiditySensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STHumiditySensor.h; path = Sensors/STHumiditySensor.h; sourceTree = "<group>"; };
 		364BE25DA786867296D50CCB /* STBaseSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBaseSensor.h; path = Sensors/STBaseSensor.h; sourceTree = "<group>"; };
@@ -67,16 +77,24 @@
 		364BE50F7342DECB342AC91C /* CBUUID+StringRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBUUID+StringRepresentation.h"; sourceTree = "<group>"; };
 		364BE5289BF473B42FC05F87 /* STSensorConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSensorConstants.m; sourceTree = "<group>"; };
 		364BE5891795CBDA262B59B0 /* STPressureSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STPressureSensor.m; path = Sensors/STPressureSensor.m; sourceTree = "<group>"; };
+		364BE62068EDF92F252469E8 /* STDeviceListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDeviceListCell.m; sourceTree = "<group>"; };
+		364BE66584DD0FBDBB2C62A6 /* STDeviceListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDeviceListView.h; sourceTree = "<group>"; };
 		364BE750FCC0916B66A79B0A /* STKeysSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STKeysSensor.m; path = Sensors/STKeysSensor.m; sourceTree = "<group>"; };
 		364BE8A6B550BF97DD323DB0 /* STAccelerometerSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STAccelerometerSensor.m; path = Sensors/STAccelerometerSensor.m; sourceTree = "<group>"; };
 		364BE8C3CA5FFA815AD3D5BD /* STViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STViewController.h; sourceTree = "<group>"; };
 		364BE9044F436487FABDB89D /* STKeysSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STKeysSensor.h; path = Sensors/STKeysSensor.h; sourceTree = "<group>"; };
+		364BE9608CA976EF09A4A9D0 /* STConnectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STConnectionView.h; sourceTree = "<group>"; };
 		364BE9BF70C741EA0801B838 /* STAccelerometerSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STAccelerometerSensor.h; path = Sensors/STAccelerometerSensor.h; sourceTree = "<group>"; };
 		364BE9ED5C18A3CFE1A7D148 /* STPressureSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STPressureSensor.h; path = Sensors/STPressureSensor.h; sourceTree = "<group>"; };
+		364BEA16A3830A08F048EF44 /* STDeviceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDeviceListViewController.h; sourceTree = "<group>"; };
 		364BEAF66986561F7675E9AB /* STSensorTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSensorTag.m; sourceTree = "<group>"; };
+		364BEB048660D1C455FF893A /* STConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STConnectionViewController.m; sourceTree = "<group>"; };
+		364BEB0EAF068DBE8701405B /* STBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STBaseViewController.h; sourceTree = "<group>"; };
 		364BEBE3D95B1EF0CFB9C248 /* STView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STView.m; sourceTree = "<group>"; };
 		364BEBFFBF0AD0A7426E3B0B /* STSensorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSensorManager.h; sourceTree = "<group>"; };
 		364BEC1CBCEB5C05338ECC1C /* STBaseSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBaseSensor.m; path = Sensors/STBaseSensor.m; sourceTree = "<group>"; };
+		364BEC2BAB38BB16AF305A27 /* STBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STBaseViewController.m; sourceTree = "<group>"; };
+		364BED941D800739080836EE /* STDeviceListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDeviceListCell.h; sourceTree = "<group>"; };
 		364BEDD6409FD88C312F628A /* STSensorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSensorManager.m; sourceTree = "<group>"; };
 		364BEF23DD973BB8BF1C3914 /* STIRSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STIRSensor.m; path = Sensors/STIRSensor.m; sourceTree = "<group>"; };
 		364BEF710245CCC97459C1F0 /* STMagnetometerSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STMagnetometerSensor.h; path = Sensors/STMagnetometerSensor.h; sourceTree = "<group>"; };
@@ -199,6 +217,15 @@
 			name = Sensors;
 			sourceTree = "<group>";
 		};
+		364BE25203C59BDE5DB226B0 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				364BED2881359CE886690E24 /* List */,
+				364BEE3F88C8B22E2E91FB34 /* Establish */,
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
 		364BE5B0AA85E23D8F5EDD75 /* Device */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,8 +249,43 @@
 				364BE4D7BE348AA280B9EAE9 /* STViewController.m */,
 				364BEBE3D95B1EF0CFB9C248 /* STView.m */,
 				364BE4B371FDC97D57EBA082 /* STView.h */,
+				364BE25203C59BDE5DB226B0 /* Connection */,
+				364BE64C60E19BBAE8328572 /* Base */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		364BE64C60E19BBAE8328572 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				364BEB0EAF068DBE8701405B /* STBaseViewController.h */,
+				364BEC2BAB38BB16AF305A27 /* STBaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		364BED2881359CE886690E24 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				364BED941D800739080836EE /* STDeviceListCell.h */,
+				364BE62068EDF92F252469E8 /* STDeviceListCell.m */,
+				364BE66584DD0FBDBB2C62A6 /* STDeviceListView.h */,
+				364BE0707B1FE60CE59099A2 /* STDeviceListView.m */,
+				364BEA16A3830A08F048EF44 /* STDeviceListViewController.h */,
+				364BE10077CCEAA2367B6D9B /* STDeviceListViewController.m */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		364BEE3F88C8B22E2E91FB34 /* Establish */ = {
+			isa = PBXGroup;
+			children = (
+				364BE9608CA976EF09A4A9D0 /* STConnectionView.h */,
+				364BE13CCDBC229534EEC5DB /* STConnectionView.m */,
+				364BE044AD4163669D1D0082 /* STConnectionViewController.h */,
+				364BEB048660D1C455FF893A /* STConnectionViewController.m */,
+			);
+			path = Establish;
 			sourceTree = "<group>";
 		};
 		405A41CFDC2BC0BAB8DB7FFA /* Pods */ = {
@@ -385,6 +447,12 @@
 				364BEF3486F5925C55CD2CE7 /* STKeysSensor.m in Sources */,
 				364BE5751581DF787EF083B0 /* STMagnetometerSensor.m in Sources */,
 				364BEE4C409A8BF0BB1D9271 /* STPressureSensor.m in Sources */,
+				364BE6A2906529923691A1EB /* STDeviceListCell.m in Sources */,
+				364BE124EA5DF01B0A2E976B /* STDeviceListView.m in Sources */,
+				364BE3CAE4050AFDE34D0D79 /* STDeviceListViewController.m in Sources */,
+				364BE9C4D3F65FD43250021F /* STConnectionView.m in Sources */,
+				364BEA828D962744E1DA3F8B /* STConnectionViewController.m in Sources */,
+				364BE9C6FD24A71845E19F62 /* STBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

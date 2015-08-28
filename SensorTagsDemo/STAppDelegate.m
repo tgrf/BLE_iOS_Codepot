@@ -4,6 +4,7 @@
 #import "DDTTYLogger.h"
 #import "STSensorManager.h"
 #import "STViewController.h"
+#import "STDeviceListViewController.h"
 
 @interface STAppDelegate ()
 @property (readonly, strong, nonatomic) STSensorManager *sensorManager;
@@ -21,7 +22,10 @@
     _sensorManager = [[STSensorManager alloc] init];
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:[[STViewController alloc] init]];
+
+    STViewController *viewController = [STViewController new];
+    STDeviceListViewController *deviceListViewController = [[STDeviceListViewController alloc] initWithFinalViewController:viewController type:STDeviceListTypeSingleSelection];
+    UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:deviceListViewController];
     self.window.rootViewController = controller;
     [self.window makeKeyAndVisible];
 

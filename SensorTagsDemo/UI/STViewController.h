@@ -1,4 +1,6 @@
 
-@interface STViewController : UIViewController
+#import "STBaseViewController.h"
+
+@interface STViewController : STBaseViewController
 
 @end
