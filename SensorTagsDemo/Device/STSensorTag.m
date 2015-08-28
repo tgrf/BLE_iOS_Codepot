@@ -23,8 +23,6 @@ NSString *const STSensorTagConnectionFailureNotificationErrorKey = @"STSensorTag
 - (instancetype)initWithPeripheral:(CBPeripheral *)peripheral {
     self = [self init];
     if (self) {
-        self.peripheral = peripheral;
-        self.peripheral.delegate = self;
         
         self.calibrationDataUnsigned = (UInt16 *)malloc(sizeof(UInt16) * 8);
         self.calibrationDataSigned = (int16_t *)malloc(sizeof(int16_t) * 8);
@@ -52,9 +50,6 @@ NSString *const STSensorTagConnectionFailureNotificationErrorKey = @"STSensorTag
         DDLogError(@"%s %@", __PRETTY_FUNCTION__, error);
         [[NSNotificationCenter defaultCenter] postNotificationName:STSensorTagConnectionFailureNotification object:self userInfo:@{STSensorTagConnectionFailureNotificationErrorKey : error}];
     } else {
-        for (CBService *service in [peripheral services]) {
-            [peripheral discoverCharacteristics:nil forService:service];
-        }
     }
 }
 
@@ -111,14 +106,12 @@ NSString *const STSensorTagConnectionFailureNotificationErrorKey = @"STSensorTag
 
 - (void)peripheral:(CBPeripheral *)peripheral didModifyServices:(NSArray *)invalidatedServices {
     DDLogInfo(@"%s %@ %@", __PRETTY_FUNCTION__, peripheral, invalidatedServices);
-    [peripheral discoverServices:invalidatedServices];
 }
 
 #pragma mark -
 
 - (void)discoverServices {
     self.numberOfDiscoveredServices = 0;
-    [self.peripheral discoverServices:[STSensorTag availableServicesUUIDArray]];
 }
 
 #pragma mark -

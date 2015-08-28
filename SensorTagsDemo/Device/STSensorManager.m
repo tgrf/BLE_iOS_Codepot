@@ -28,7 +28,6 @@ NSString *const STSensorTagErrorDomain = @"STSensorTagErrorDomain";
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:dispatch_queue_create("JitterTISensorTagManagerQueue", DISPATCH_QUEUE_SERIAL)];
         self.peripherals = [NSMutableDictionary dictionary];
 
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(finishedDiscovery:) name:STSensorTagDidFinishDiscoveryNotification object:nil];
@@ -58,25 +57,13 @@ NSString *const STSensorTagErrorDomain = @"STSensorTagErrorDomain";
 
 - (void)stopScanning {
     DDLogInfo(@"%s", __PRETTY_FUNCTION__);
-    [self.centralManager stopScan];
 }
 
 - (void)connectSensorWithUUID:(NSUUID *)uuid {
     DDLogInfo(@"%s %@", __PRETTY_FUNCTION__, uuid);
     STSensorTag *sensorTag = self.peripherals[uuid.UUIDString];
     if (sensorTag) {
-        [self.centralManager connectPeripheral:sensorTag.peripheral options:nil];
-        [self startWatchdogForSensor:sensorTag];
     } else {
-        CBPeripheral *peripheral = [[self.centralManager retrievePeripheralsWithIdentifiers:@[uuid]] firstObject];
-        if (peripheral) {
-            sensorTag = [[STSensorTag alloc] initWithPeripheral:peripheral];
-            self.peripherals[uuid.UUIDString] = sensorTag;
-            [self.centralManager connectPeripheral:peripheral options:nil];
-            [self startWatchdogForSensor:sensorTag];
-        } else {
-            [self.delegate manager:self didFailToConnectToSensorWithError:[NSError errorWithDomain:STSensorTagErrorDomain code:STSensorManagerErrorNoDeviceFound userInfo:@{NSLocalizedDescriptionKey : STSensorManagerNoDeviceError}]];
-        }
     }
 }
 
@@ -93,8 +80,6 @@ NSString *const STSensorTagErrorDomain = @"STSensorTagErrorDomain";
 
 - (void)watchdogFired {
     DDLogError(@"%s", __PRETTY_FUNCTION__);
-    [self.centralManager cancelPeripheralConnection:self.connectingSensor.peripheral];
-    [self.delegate manager:self didFailToConnectToSensorWithError:[NSError errorWithDomain:STSensorTagErrorDomain code:STSensorManagerTimeout userInfo:@{NSLocalizedDescriptionKey : STSensorManagerConnectionTimeoutError}]];
 
     [self.watchdogTimer invalidate];
     self.watchdogTimer = nil;
@@ -119,21 +104,11 @@ NSString *const STSensorTagErrorDomain = @"STSensorTagErrorDomain";
 
 - (void)findNearestAndConnect {
     DDLogInfo(@"%s", __PRETTY_FUNCTION__);
-    [self stopScanning];
-    NSArray *sortedPeripherals = [[self.peripherals allValues] sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:NSStringFromSelector(@selector(rssi)) ascending:NO]]];
-    if (sortedPeripherals.count == 0) {
-        [self.delegate manager:self didFailToConnectToSensorWithError:[NSError errorWithDomain:STSensorTagErrorDomain code:STSensorManagerErrorNoDeviceFound userInfo:@{NSLocalizedDescriptionKey : STSensorManagerNoDeviceError}]];
-    } else {
-        STSensorTag *tag = [sortedPeripherals firstObject];
-        [self connectSensorWithUUID:tag.peripheral.identifier];
-    }
 }
 
 - (void)scan {
     DDLogInfo(@"%s", __PRETTY_FUNCTION__);
     if (self.shouldStartScanning && self.centralManager.state == CBCentralManagerStatePoweredOn) {
-        self.shouldStartScanning = NO;
-        [self.centralManager scanForPeripheralsWithServices:nil options:@{CBCentralManagerScanOptionAllowDuplicatesKey : @(YES)}];
     }
 }
 
@@ -145,23 +120,13 @@ NSString *const STSensorTagErrorDomain = @"STSensorTagErrorDomain";
 
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI {
     DDLogVerbose(@"%s %@", __PRETTY_FUNCTION__, peripheral);
-    STSensorTag *sensor = self.peripherals[peripheral.identifier.UUIDString];
-    if (!sensor && ([peripheral.name isEqualToString:@"SensorTag"] || [peripheral.name isEqualToString:@"TI BLE Sensor Tag"])) {
-        sensor = [[STSensorTag alloc] initWithPeripheral:peripheral];
-        self.peripherals[peripheral.identifier.UUIDString] = sensor;
-    }
-    sensor.rssi = [RSSI integerValue];
 
-    [self.delegate manager:self didDiscoverSensor:sensor];
 }
 
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
     DDLogInfo(@"%s %@", __PRETTY_FUNCTION__, peripheral);
     [[NSUserDefaults standardUserDefaults] setObject:peripheral.identifier.UUIDString forKey:kSTSensorManagerLastDeviceUUID];
     [[NSUserDefaults standardUserDefaults] synchronize];
-
-    STSensorTag *sensor = self.peripherals[peripheral.identifier.UUIDString];
-    [sensor discoverServices];
 }
 
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
@@ -181,7 +146,6 @@ NSString *const STSensorTagErrorDomain = @"STSensorTagErrorDomain";
 - (void)disconnectSensor:(STSensorTag *)sensorTag {
     [self stopWatchdog];
     if (sensorTag.peripheral) {
-        [self.centralManager cancelPeripheralConnection:sensorTag.peripheral];
     }
 }
 
